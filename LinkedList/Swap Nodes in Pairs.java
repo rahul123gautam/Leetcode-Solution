@@ -20,6 +20,11 @@ Constraints:
 The number of nodes in the list is in the range [0, 100].
 0 <= Node.val <= 100
   
+  
+  
+                    ******************CODE****************
+                    
+  
 class Solution {
     public ListNode swapPairs(ListNode head) {
         if(head == null || head.next == null) return head;
