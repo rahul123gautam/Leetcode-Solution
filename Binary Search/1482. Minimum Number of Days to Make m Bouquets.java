@@ -66,18 +66,16 @@ bloomDay.length == n
         int count = 0 , i = 0 , ans = 0 , n = bloomDay.length;
         int[]arr = new int[n];
         for(int j = 0; j < n; j++){
-            if(bloomDay[j] <= mid) arr[j] = 1;
-            else arr[j] = 0;
-        }
-        while(i < n){
-            while(i < n && arr[i] == 1){
+            if(bloomDay[j] <= mid) {
+                arr[j] = 1;
                 count++;
-                i++;
             }
-            ans += count/k;
-            count = 0;
-            i++;
+            else {
+                arr[j] = 0;
+                ans += count/k;
+                count = 0;
+            }   
         }
-        return ans;
+        return ans += count/k;
     }
 }
